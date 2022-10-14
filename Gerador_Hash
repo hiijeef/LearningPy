@@ -1,0 +1,39 @@
+import hashlib
+
+print ('-'*68)
+
+menu = int(input('''
+                                         MENU 
+                    ------------------------------------------------   
+                    digite o numero correspondente a hash desejada : 
+                    1 - md5 
+                    2 - sha1 
+                    3 - sha256
+                    4 - sha512
+                    ------------------------------------------------
+                    '''))
+print ('-'*68)
+
+string = input('Digite a string a ser convertida em hash : ')
+
+print ('-'*68)
+
+
+if menu == 1: 
+    converte = hashlib.md5(string.encode('UTF-8'))
+    print ('hash md5 da string :',string,'é :',converte.hexdigest())
+
+elif menu == 2: 
+    converte = hashlib.sha1(string.encode('UTF-8'))
+    print ('hash sha1 da string :',string,'é :',converte.hexdigest())
+        
+elif menu == 3: 
+    converte = hashlib.sha256(string.encode('UTF-8'))
+    print ('hash sha256 da string :',string,'é :',converte.hexdigest())
+
+elif menu == 4: 
+    converte = hashlib.sha512(string.encode('UTF-8'))
+    print ('hash sha512 da string :',string,'é :',converte.hexdigest())
+
+else : 
+    print ('Digite o numero correspondente no menu! ')
