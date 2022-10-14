@@ -1,0 +1,15 @@
+import random
+
+min = 'abcdefghijklmnopqrstuvwxyz'
+mai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+sim = '!@#$&?\/'
+num = '1234567890'
+
+senha = min+mai+sim+num 
+
+tam = int(input('Digite a quantidade de caracteres para o passoword : '))
+
+passoword = ''.join(random.sample(senha,tam))
+
+print('O passoword gerado : '+ passoword)
+
